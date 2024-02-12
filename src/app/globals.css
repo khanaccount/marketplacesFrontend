@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.from-custom-purple {
+    --gradient-from-color: #e81cff;
+}
+
+.to-custom-blue {
+    --gradient-to-color: #45caff;
+}
+
+.bg-gradient-to-r {
+    background: linear-gradient(
+        to right,
+        var(--gradient-from-color),
+        var(--gradient-to-color)
+    );
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
