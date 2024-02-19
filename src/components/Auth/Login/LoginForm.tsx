@@ -1,38 +1,51 @@
+"use client";
+
 import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import gbitem from "../../../../public/img/auth/login/gbitem.png";
 
-import { OpenEye } from "./OpenEyeSvg";
-import { CloseEye } from "./CloseEyeSvg";
-import { ExitSvg } from "./ExitSvg";
+import { OpenEye } from "../OpenEyeSvg";
+import { CloseEye } from "../CloseEyeSvg";
+import { ExitSvg } from "../ExitSvg";
 
 const LoginForm: React.FC = () => {
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
+
     return (
         <>
-            <div className="mt-24 mb-[170px] max-w-[530px]">
+            <div className="mt-24 mb-[160px] max-w-[530px]">
                 <input
-                    className="w-[502px] h-[80px] bg-transparent mt-[30px] pr-[24px] text-2xl rounded-[8px] font-bold pl-[24px] border-[1.5px] border-white"
+                    className="w-[502px] h-[80px] bg-transparent mt-[30px] pr-[24px] text-2xl rounded-[8px] font-bold pl-[24px] border-[1.5px] dark:border-white white: border-[#2F2F2F]"
                     type="text"
                     id="phone"
                     placeholder="Введите номер телефона"
                 />
                 <input
-                    className="w-[502px] h-[80px] bg-transparent mt-[30px] pr-[24px] text-2xl rounded-[8px] font-bold pl-[24px] border-[1.5px] border-white"
+                    className="w-[502px] h-[80px] bg-transparent mt-[30px] pr-[24px] text-2xl rounded-[8px] font-bold pl-[24px] border-[1.5px] dark:border-white white: border-[#2F2F2F]"
                     id="password"
+                    type={passwordVisible ? "text" : "password"}
                     placeholder="Введите пароль"
                 />
 
                 <form className="relative">
-                    <button className="absolute top-[-40px] right-[32px] transform -translate-x-1/2 -translate-y-1/2">
-                        <OpenEye />
-
-                        {/* <CloseEye /> */}
+                    <button
+                        type="button"
+                        onClick={togglePasswordVisibility}
+                        className="absolute top-[-40px] right-[32px] transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                        {passwordVisible ? <CloseEye /> : <OpenEye />}
                     </button>
                 </form>
                 <Image
                     className="absolute top-0 right-0 opacity-60 z-10 pointer-events-none"
+                    loading="eager"
                     src={gbitem}
                     width={995}
                     height={900}
@@ -46,7 +59,7 @@ const LoginForm: React.FC = () => {
 
                 <label className="flex items-center cursor-pointer">
                     <input
-                        className="w-[27px] h-[27px] mr-[8px]"
+                        className="w-[27px] h-[27px] mr-[8px] dark:accent-white white:accent-[#2F2F2F]"
                         type="checkbox"
                     />
                     <span className="text-[14px] ">
@@ -64,7 +77,7 @@ const LoginForm: React.FC = () => {
                 <div className="flex items-center">
                     <ExitSvg />
                     <Link
-                        href={"#"}
+                        href={"/auth/sign-up"}
                         className="pdl-[3px] font-semibold text-[24px] cursor-pointer"
                     >
                         Зарегистрироваться

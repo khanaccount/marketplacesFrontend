@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         "Войдите в свою учетную запись на Моем сайте для доступа к личным данным и функциям",
 };
 
-export default function Login() {
+export default function SignIn() {
     return (
         <div className="flex flex-col items-center justify-center ">
             <div className="max-w-[1640px] mt-[60px] pl-[10px] pr-[10px] w-full px-4">
