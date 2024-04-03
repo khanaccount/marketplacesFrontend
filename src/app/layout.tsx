@@ -16,8 +16,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={montserrat.className}>
+        <html className="" lang="en">
+            <body className={`${montserrat.className} dark:bg-[#232323]`}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"

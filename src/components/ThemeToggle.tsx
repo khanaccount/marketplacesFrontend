@@ -29,7 +29,7 @@ const ThemeToggle: React.FC = () => {
     };
 
     return (
-        <div className="w-[113px] h-[46px] flex justify-between items-center pb-[3px] p-[6px] pt-[3px] rounded-[12px] bg-[#2F2F2F] relative">
+        <div className="w-[113px] h-[46px] flex justify-between items-center pb-[3px] p-[6px] pt-[3px] rounded-[12px] bg-[#2F2F2F] relative shadow-btnShadow ">
             <div
                 className="absolute w-[38px] h-[40px] bg-[#FFFFFF] rounded-[8px] transition-transform duration-500 ease-in-out"
                 style={{

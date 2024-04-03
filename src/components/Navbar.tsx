@@ -26,15 +26,18 @@ const Navbar: React.FC = () => {
                     <ExitSvg />
 
                     <Link
-                        href={"/auth/sign-up"}
+                        href={"/auth/sign-in"}
                         className="pdl-[3px] font-semibold text-[24px] cursor-pointer"
                     >
                         Войти
                     </Link>
                 </div>
-                <button className="pl-[40px] pr-[40px] h-[47px] bg-gradient-to-r from-custom-purple to-custom-blue rounded-[8px] font-semibold text-2xl ">
-                    Регистрация
-                </button>
+                <Link
+                    href={"/auth/sign-up"}
+                    className="pl-[40px] pr-[40px] h-[47px] flex items-center bg-gradient-to-r from-custom-purple to-custom-blue rounded-[8px] font-semibold text-2xl text-white"
+                >
+                    Зарегистрироваться
+                </Link>
             </div>
         </nav>
     );
