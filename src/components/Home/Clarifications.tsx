@@ -17,7 +17,7 @@ const Clarifications: React.FC = () => {
             />
             <div className="m-auto  max-w-[1720px]">
                 <div className="pt-[233px] flex justify-center">
-                    <div className="max-w-[700px] max-h-[180px] relative bg-[#2F2F2F] rounded-t-lg p-7 dark:bg-white">
+                    <div className="max-w-[700px] max-h-[180px] relative bg-[#2F2F2F] rounded-t-lg rounded-br-lg p-7 dark:bg-white">
                         <div className="absolute inset-0 top-0 rounded-full bg-gradient-to-r from-custom-purple to-custom-blue opacity-10 filter blur-[175px]"></div>
                         <p className="text-3xl font-medium text-white dark:text-black">
                             Добро пожаловать в iKnowROS.app, ваш надежный
